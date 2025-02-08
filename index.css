@@ -1,4 +1,7 @@
 /* styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
     --primary-color: #2563eb;
     --secondary-color: #5D3FD3;
@@ -38,7 +41,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.93);
     z-index: 1000;
     box-shadow: var(--shadow);
 }
@@ -313,8 +316,9 @@ body {
 }
 
 .hero h1 {
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
-    font-weight: 700;
+    font-size: clamp(7rem, 8vw, 4.5rem);
+    font-weight: 400;
+    font-family: 'Montserrat';
     background: linear-gradient(
     45deg,
     var(--primary-color),
@@ -333,11 +337,13 @@ body {
 
 .subtitle {
     font-size: clamp(1rem, 4vw, 1.5rem);
-    margin: 1.5rem 0;
+    margin: .5rem 0;
     animation: fadeInUp 1s ease 0.2s backwards;
     opacity: 0.9;
     transform: translateZ(20px);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    margin-top: -20px;
 }
 
 .cta-buttons {
@@ -447,8 +453,9 @@ body {
     position: absolute;
     width: 100%;
     height: 2px;
-    background: linear-gradient(to right, #ff0000, #00ffff);
-    bottom: -5px;
+    background: linear-gradient(to right, #b961e1, #2d73b8);
+    top: 50px;
+    bottom: 50px;
     left: 0;
     transform: scaleX(0);
     transform-origin: right;
@@ -456,7 +463,7 @@ body {
 }
 
 .hover-underline::before {
-    top: -5px;
+    top: 50px;
     transform-origin: left;
 }
 
@@ -516,7 +523,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
@@ -559,9 +566,9 @@ body {
 }
 
 .me-image {
-    width: 100%;
+    width: 140%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 28px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -570,9 +577,11 @@ body {
 }
 
 .text-content p {
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    line-height: 2;
     color: #555;
+    font-size: 1.4rem;
+    margin-left: 120px;
 }
 
 .text-content p:last-child {
@@ -633,7 +642,8 @@ body {
 
 .project-card {
     background: var(--card-bg);
-    border-radius: 15px;
+    border: 0.1px solid #cbc4e7;
+    border-radius: 25px;
     padding: 2rem;
     box-shadow: var(--shadow);
     transition: var(--transition);
@@ -712,6 +722,8 @@ body {
     padding: 6rem 2rem;
 }
 
+
+
 .section-title {
     text-align: center;
     font-size: 2.5rem;
@@ -739,7 +751,8 @@ body {
 
 .Research-card {
     background: var(--card-bg);
-    border-radius: 15px;
+    border-radius: 25px;
+    border: 0.1px solid #c5c0d9;
     padding: 2rem;
     box-shadow: var(--shadow);
     transition: var(--transition);
@@ -831,7 +844,8 @@ body {
 .skill-category {
     background: var(--card-bg);
     background: auto-fit;
-    border-radius: 15px;
+    border-radius: 25px;
+    border: 0.1px solid #c5c0d9;
     padding: 2rem;
     margin-bottom: 2rem;
     box-shadow: var(--shadow);
@@ -861,7 +875,7 @@ body {
     width: 24px; 
     height: 24px; 
     vertical-align: middle;
-    margin-right: 8px; 
+    margin-right: 10px; 
 }
 
 .skill-item:hover::before {
@@ -893,7 +907,8 @@ body {
 
 .experience-card {
     background: var(--card-bg);
-    border-radius: 15px;
+    border-radius: 25px;
+    border: 0.1px solid #c5c0d9;
     padding: 2rem;
     box-shadow: var(--shadow);
     transition: var(--transition);
@@ -925,7 +940,8 @@ body {
     font-size: 0.875rem; 
     font-weight: 500; 
     margin-top: 0.5rem; 
-    display: inline-block; 
+    display: inline-block;
+    margin-right: 10px; 
 }
 
 
@@ -948,7 +964,8 @@ body {
 .contact-card {
     background: var(--card-bg);
     padding: 2rem;
-    border-radius: 15px;
+    border-radius: 25px;
+    border: 0.1px solid #c5c0d9;
     box-shadow: var(--shadow);
     text-align: center;
     transition: var(--transition);
@@ -985,7 +1002,8 @@ body {
 .contact-form {
     background: var(--card-bg);
     padding: 2rem;
-    border-radius: 15px;
+    border-radius: 25px;
+    border: 0.1px solid #c5c0d9;
     box-shadow: var(--shadow);
 }
 
@@ -999,7 +1017,7 @@ body {
     width: 100%;
     padding: 1rem;
     border: 1px solid #e2e8f0;
-    border-radius: 8px;
+    border-radius: 25px;
     background: #f8fafc;
     font-family: inherit;
     transition: var(--transition);
@@ -1026,7 +1044,7 @@ body {
 
 /* Animation for Fade-in Effects */
 
-@keyframes fadeInUp {
+keyframes fadeInUp {
     from {
     opacity: 0;
     transform: translateY(20px);

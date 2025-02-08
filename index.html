@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kesava Datta - Portfolio</title>
-    <link rel="stylesheet" href="k.css">
+    <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -69,6 +69,7 @@
     </section>
     
     <section id="projects" class="section">
+        <div class="container">
         <h2 class="section-title">Projects</h2>
         <div class="project-grid">
             <div class="project-card" data-aos="fade-up" data-aos-delay="200">
@@ -122,10 +123,12 @@
                 </div>
             </div>
         </div>
+        </div>
     </section>
 
     <section id="Research" class="section">
-        <h2 class="section-title">Researches</h2>
+        <div class="container">
+        <h2 class="section-title">Research</h2>
         <p class="section-title">OnGoing</p>
         <div class="Papers-grid">
             <div class="Research-card" data-aos="fade-up" data-aos-delay="200">
@@ -148,6 +151,8 @@
                     <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
                 </div>
             </div>
+            
+        </div>
         </div>
     </section>
 
@@ -213,18 +218,29 @@
                     </div>
                 </div>
             </div>
-            <form class="contact-form" id="contactForm">
-                <div class="form-group"><input type="text" id="name" placeholder="Your Name" required><label for="name"></label></div>
-                <div class="form-group"><input type="email" id="email" placeholder="Your Email" required><label for="email"></label></div>
-                <div class="form-group"><textarea id="message" placeholder="Your Message" required></textarea><label for="message"></label></div>
-                <button type="submit" class="btn primary-btn"><i class="fas fa-paper-plane"></i></button>
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/mvgzqwql" method="POST">
+                <div class="form-group">
+                    <label for="name"></label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email"></label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message"></label>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn">
+                    <i class="fas fa-paper-plane"></i> Send
+                </button>
             </form>
+            
             
         </div>
     </section>
 
     <footer><p>&copy; 2025 Kesava Datta. All rights reserved.</p></footer>
 
-    <script src="k.js"></script> 
 </body>
 </html>
