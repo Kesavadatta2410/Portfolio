@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kesava Datta - Portfolio</title>
+    <link rel="stylesheet" href="kd.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav-bar">
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#aboutme" class="nav-link"><i class="fas fa-user-alt"></i> About</a></li>
+            <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li><a href="#research" class="nav-link"><i class="fas fa-book-open"></i> Research</a></li>
+            <li><a href="#skills" class="nav-link"><i class="fas fa-laptop-code"></i> Skills</a></li>
+            <li><a href="#interests" class="nav-link"><i class="fas fa-info"></i>Interests</a></li>
+            <li><a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i> Experience</a></li>
+            <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>        
+    <section id="home" class="section">
+        <div class="hero">
+            <div class="box-container"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div><div></div><div></div><div></div><div></div><div></div>
+            <div class='ripple-background'>
+                <div class='circle xxlarge shade1'></div>
+                <div class='circle xlarge shade2'></div>
+                <div class='circle large shade3'></div>
+                <div class='circle mediun shade4'></div>
+                <div class='circle small shade5'></div>
+            </div>
+            <div class="hero-content">
+                <div class="hover-underline">
+                <h1 class="glitch" data-text="Kesava Datta"><strong>Kesava</strong> Datta</h1>
+            </div>
+                <p class="subtitle">Innovating through Technology & Creativity</p>
+                <div class="cta-buttons">
+                    <a href="/labels/resume.pdf" class="btn primary-btn" download><i class="fas fa-download"></i> Download Resume</a>
+                    <a href="#contact" class="btn secondary-btn"><i class="fas fa-paper-plane"></i> Contact Me</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <p>Scroll to explore</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="aboutme" class="me">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="image-wrapper">
+                    <img src="/labels/profile.jpg" alt="Kesava Datta" class="me-image">
+                </div>
+                <div class="text-content">
+                    <p>I'm a passionate <strong>3D designer</strong> and tech enthusiast pursuing a degree in <strong>Artificial Intelligence and Machine Learning</strong> at Woxsen University. As the President of the Ankur Club (Incubation Club), I lead initiatives to foster innovation and support aspiring entrepreneurs.</p>
+                    <p>My expertise lies in 3D modelling and animation, with a focus on Blender, where I bring ideas to life through digital design. I am also strongly interested in <strong>IoT</strong>, blending design and technology to create impactful solutions.</p>
+                    <p>I'm always eager to collaborate on projects that push the boundaries of AI, design, and IoT, helping bridge the gap between creative concepts and real-world applications. Let's connect and explore opportunities to innovate together!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects" class="section">
+        <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-grid">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-icon"><i class="fas fa-robot"></i></div>
+                <h3>MediLink</h3>
+                <p>A healthcare website for storing long-term patient records.</p>
+                <div class="project-tech"><span>Website</span><span>Healthcare</span></div>
+                <!-- <div class="project-links">
+                    <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                </div> -->
+            </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-icon"><i class="fas fa-robot"></i></div>
+                <h3>DroneGo</h3>
+                <p>Optimized multi-drone delivery system using path optimization algorithms.</p>
+                <div class="project-tech"><span>Drones</span><span>Automation</span><span>Software</span></div>
+                <div class="project-links">
+                    <a href="https://github.com/Kesavadatta2410/DroneGo/tree/main" class="project-link"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-icon"><i class="fas fa-robot"></i></div>
+                <h3>Drainage Rides</h3>
+                <p>An automated IoT-based machine for cleaning drainage systems.</p>
+                <div class="project-tech"><span>IoT</span><span>Automation</span><span>Hardware</span></div>
+                <div class="project-links">
+                    <a href="https://github.com/Kesavadatta2410/Drainage-Rides" class="project-link"><i class="fab fa-github"></i> Code</a>
+                    <a href="/labels/SIP.png" class="project-link"><i class="fas fa-external-link-alt"></i> Design</a>
+                </div>
+            </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-icon"><i class="fas fa-charging-station"></i></div>
+                <h3>Wheels on the charge</h3>
+                <p>Dynamic wireless charging system for EVs</p>
+                <div class="project-tech"><span>Patent: 202441067024 A</span><span>EV Technology</span></div>
+                <div class="project-links">
+                    <!-- <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a> -->
+                    <a href="/labels/elp.png" class="project-link"><i class="fas fa-external-link-alt"></i> Design</a>
+                    <a href="/labels/patent1.jpg" class="project-link"><i class="fas fa-external-link-alt"></i> Details</a>
+                </div>
+            </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Waist belt</h3>
+                <p>Smart fall protection belt for elderly care</p>
+                <div class="project-tech"><span>IoT</span><span>Healthcare</span></div>
+                <!-- <div class="project-links">
+                    <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                </div> -->
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="Research" class="section">
+        <div class="container">
+        <h2 class="section-title">Research</h2>
+        <p class="section-title">OnGoing</p>
+        <div class="Papers-grid">
+            <div class="Research-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="Research-icon"><i class="fas fa-robot"></i></div>
+                <h3>Federated Learning</h3>
+                <p>Implementing the Federated learning in the differential privacy across the flower framework with different feature selection algorithms.</p>
+                <div class="Research-tech"><span>Neural Networks</span><span>Programming</span></div>
+                <!-- <div class="Research-link">
+                    <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                </div> -->
+            </div>
+            <div class="Research-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="Research-icon"><i class="fas fa-robot"></i></div>
+                <h3>Data Mining</h3>
+                <p>Exploring the Statistic along with the Probability</p>
+                <div class="Research-tech"><span>R-Programming</span><span>Probability</span></div>
+                <!-- <div class="Research-link">
+                    <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                </div> -->
+            </div>
+            
+        </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <h2 class="section-title">Skills & Expertise</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3><i class="fas fa-code"></i> Programming</h3>
+                <div class="skill-grid">
+                    <div class="skill-item"><img src="/assets/html.png" alt="html" class="skill-icon"><span> HTML</span><div class="skill-level" data-level="90"></div></div>
+                    <div class="skill-item"><img src="/assets/css-3.png" alt="html" class="skill-icon"><span> CSS</span><div class="skill-level" data-level="85"></div></div>
+                    <div class="skill-item"><img src="/assets/python.png" alt="html" class="skill-icon"><span> Python</span><div class="skill-level" data-level="0"></div></div>
+                    <div class="skill-item"><img src="/assets/java.png" alt="html" class="skill-icon"><span> Java</span><div class="skill-level" data-level="0"></div></div>
+                    <div class="skill-item"><img src="/assets/sql-server.png" alt="html" class="skill-icon"><span> MySQL</span><div class="skill-level" data-level="100"></div></div>
+                    <div class="skill-item"><img src="/assets/r.png" alt="html" class="skill-icon"><span> R</span><div class="skill-level" data-level="0"></div></div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+                <div class="skill-grid">
+                    <div class="skill-item"><img src="/assets/blender-3d.png" alt="Unity" class="skill-icon"><span>Blender</span><div class="skill-level" data-level="75"></div></div>
+                    <div class="skill-item"><img src="/assets/MAYA.png" alt="Unity" class="skill-icon"><span>Maya</span><div class="skill-level" data-level="70"></div></div>
+                    <div class="skill-item"><img src="/assets/unity.png" alt="Unity" class="skill-icon"><span>Unity</span><div class="skill-level" data-level="70"></div></div>
+                    <div class="skill-item"><img src="/assets/illustrator.png" alt="Adobe Illustrator Logo" class="skill-icon"><span>Adobe Illustrator</span><div class="skill-level" data-level="80"></div></div>
+                    <div class="skill-item"><img src="/assets/xd.png" alt="Adobe Illustrator Logo" class="skill-icon"><span>Adobe XD</span><div class="skill-level" data-level="80"></div></div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-database"></i> Technical Expertise</h3>
+                <div class="skill-grid">
+                    <div class="skill-item"><img src="/assets/ML.png" alt="ML" class="skill-icon"><span>Machine Learning</span><div class="skill-level" data-level="100"></div></div>
+                    <div class="skill-item"><img src="/assets/deep-learning (1).png" alt="Deep Learning" class="skill-icon"><span>deep-learning</span><div class="skill-level" data-level="70"></div></div>
+                    <div class="skill-item"><img src="/assets/DSA.png" alt="DSA" class="skill-icon"><span>Data Structures</span><div class="skill-level" data-level="60"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Interests Section -->
+<section id="interests" class="section">
+    <div class="container">
+    <h2 class="section-title">Passions & Pursuits</h2>
+        <div class="interests-grid">
+            <div class="interest-card"  data-aos="fade-up" data-aos-delay="200">
+                <div class="interest-icon"><i class="fas fa-atom"></i></div>
+                <h3>IoT Innovation</h3>
+                <p>Creating smart solutions through connected devices.</p>
+                <div class="interest-tech"><span>Smart Home Automation</span><span>Wearable-Tech</span><span>Sensor Network</span></div>
+            </div>
+            <div class="interest-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="interest-icon"><i class="fas fa-film"></i></div>
+                <h3>Short Film Acting</h3>
+                <p>Bringing stories to life through performance.</p>
+                <div class="interest-tech"><span>Scene Study</span><span>On-Camera Techniques</span></div>
+                <div class="interest-icon">
+                    <a href="https://youtu.be/mL7ozaKYzuY?si=9dvFQQfS5fLyJz1L" class="interest-link"><i class="fab fa-charging-station"></i> Shortfilm</a>
+                </div>
+            </div>
+            <div class="interest-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="interest-icon"><i class="fas fa-atom"></i></div>
+                <h3>Tech Research</h3>
+                <p>Exploring cutting-edge technological developments.</p>
+                <div class="interest-tech"><span>AI & machine Learning</span><span>Innovation Trends</span><span>Emerging Technologies</span></div>
+            </div>
+            <div class="interest-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="interest-icon"><i class="fas fa-atom"></i></div>
+                <h3>Meta-verse</h3>
+                <p>Modeling, game development, and XR technologies, shaping immersive experiences within the Meta-verse.</p>
+                <div class="project-tech"><span>3-D, 2-D Modelling</span><span>Game Development</span><span>Animation</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--experience-->    
+<section id="experience" class="section">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-timeline">
+            <div class="experience-card fade-in-left">
+                <h3>Python Developer - Cosmic3D Printers</h3>
+                <p>Developed Python programs to directly control 3D printers.</p>
+                <span>3D-Printing</span><span>Python</span>
+            </div>
+            <div class="experience-card fade-in-right">
+                <h3>President - Ankur Incubation Club (IIC)</h3>
+                <p>Led events and workshops, mentoring students in entrepreneurship.</p>
+                <span>Startups</span><span>Business</span>
+            </div>
+            <div class="experience-card fade-in-left">
+                <h3>Film Club Executive - Woxsen University</h3>
+                <p>Organized film screenings and discussions, fostering creativity among students.</p>
+                <span>Acting</span><span>Movies</span>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Me</h3>
+                    <a href="mailto:kesavadattagarlapati@gmail.com">kesavadattagarlapati@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Social Media</h3>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/kesava-datta-a790892a3/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Kesavadatta2410" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                        <a href="https://instagram.com/kesava_datta_2324/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/mvgzqwql" method="POST">
+                <div class="form-group">
+                    <label for="name"></label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email"></label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message"></label>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn">
+                    <i class="fas fa-paper-plane"></i> Send
+                </button>
+            </form>
+            
+            
+        </div>
+    </section>
+        
+
+    <div class="footer">
+        <p>&copy; 2025 Kesava Datta. All rights reserved.</p>
+    </div>
+    
+
+    
+</body>
+</html>
