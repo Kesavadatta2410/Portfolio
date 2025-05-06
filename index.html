@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kesava Datta - Portfolio</title>
-    <link rel="stylesheet" href="kd.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="icon" href="/assets/Screenshot_2025-02-15_170029-removebg-preview.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -17,11 +17,21 @@
             <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a></li>
             <li><a href="#Research" class="nav-link"><i class="fas fa-book-open"></i> Research</a></li>
             <li><a href="#skills" class="nav-link"><i class="fas fa-laptop-code"></i> Skills</a></li>
-            <li><a href="#interests" class="nav-link"><i class="fas fa-info"></i>Interests</a></li>
+            <li><a href="#interests" class="nav-link"><i class="fas fa-info"></i> Interests</a></li>
             <li><a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i> Experience</a></li>
             <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
-    </nav>        
+        <div class="theme-switch">
+            <input type="checkbox" id="themeSwitch" class="theme-switch-toggle">
+            <label for="themeSwitch" class="theme-switch-label"></label>
+        </div>
+        <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
     <section id="home" class="section">
         <div class="hero">
             <div class="box-container"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div><div></div><div></div><div></div><div></div><div></div>
@@ -57,11 +67,12 @@
                     <img src="/labels/profile.jpg" alt="Kesava Datta" class="me-image">
                 </div>
                 <div class="text-content">
-                    <p>I'm a passionate <strong>3D designer</strong> and tech enthusiast pursuing a degree in <strong>Artificial Intelligence and Machine Learning</strong> at Woxsen University. As the President of the Ankur Club (Incubation Club), I lead initiatives to foster innovation and support aspiring entrepreneurs.</p>
-                    <p>My expertise lies in 3D modelling and animation, with a focus on Blender, where I bring ideas to life through digital design. I am also strongly interested in <strong>IoT</strong>, blending design and technology to create impactful solutions.</p>
-                    <p>I'm always eager to collaborate on projects that push the boundaries of AI, design, and IoT, helping bridge the gap between creative concepts and real-world applications. Let's connect and explore opportunities to innovate together!</p>
+                    <p>I'm an <strong>AI & ML engineer</strong> specializing in <strong>deep learning</strong>, <strong>machine learning</strong>, and tech innovation. As President of the Ankur Incubation Club at Woxsen University, I lead initiatives promoting entrepreneurship and technological advancement.</p>
+                    <p>My skills include <strong>AI</strong>, <strong>IoT</strong>, <strong>Python</strong>, <strong>Java</strong>, and <strong>R</strong>. I develop <strong>AI</strong>-powered solutions like drone navigation and <strong>GAN</strong>-based sketch generation, demonstrating my ability to create impactful applications.</p>
+                    <p>I'm eager to collaborate on projects pushing <strong>AI</strong>, <strong>deep learning</strong>, and <strong>IoT</strong> boundaries to transform innovative ideas into real-world solutions. Let’s connect!</p>
                 </div>
-            </div>
+                
+                
         </div>
     </section>
     
@@ -74,9 +85,6 @@
                 <h3>MediLink</h3>
                 <p>A healthcare website for storing long-term patient records.</p>
                 <div class="project-tech"><span>Website</span><span>Healthcare</span></div>
-                <!-- <div class="project-links">
-                    <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                </div> -->
             </div>
             <div class="project-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="project-icon"><i class="fas fa-robot"></i></div>
@@ -181,7 +189,7 @@
                 <div class="skill-grid">
                     <div class="skill-item"><img src="/assets/html.png" alt="html" class="skill-icon"><span> HTML</span><div class="skill-level" data-level="90"></div></div>
                     <div class="skill-item"><img src="/assets/css-3.png" alt="html" class="skill-icon"><span> CSS</span><div class="skill-level" data-level="85"></div></div>
-                    <div class="skill-item"><img src="/assets/python.png" alt="html" class="skill-icon"><span> Python</span><div class="skill-level" data-level="0"></div></div>
+                    <div class="skill-item"><img src="/assets/python.png" alt="html" class="skill-icon"><span> Python</span><div class="skill-level" data-level="100"></div></div>
                     <div class="skill-item"><img src="/assets/java.png" alt="html" class="skill-icon"><span> Java</span><div class="skill-level" data-level="0"></div></div>
                     <div class="skill-item"><img src="/assets/sql-server.png" alt="html" class="skill-icon"><span> MySQL</span><div class="skill-level" data-level="100"></div></div>
                     <div class="skill-item"><img src="/assets/r.png" alt="html" class="skill-icon"><span> R</span><div class="skill-level" data-level="0"></div></div>
@@ -223,8 +231,8 @@
                 <h3>Short Film Acting</h3>
                 <p>Bringing stories to life through performance.</p>
                 <div class="interest-tech"><span>Scene Study</span><span>On-Camera Techniques</span></div>
-                <div class="interest-icon">
-                    <a href="https://youtu.be/mL7ozaKYzuY?si=9dvFQQfS5fLyJz1L" class="interest-link"><i class="fab fa-charging-station"></i> Shortfilm</a>
+                <div class="interest-link">
+                    <a href="https://youtu.be/mL7ozaKYzuY?si=9dvFQQfS5fLyJz1L" <i class="fas fa-external-link-alt"></i> ShortFilm</a>
                 </div>
             </div>
             <div class="interest-card" data-aos="fade-up" data-aos-delay="200">
@@ -316,7 +324,45 @@
         <p>&copy; 2025 Kesava Datta. All rights reserved.</p>
     </div>
     
-
+    <script>
+        // Theme Switch Functionality
+        const themeSwitch = document.getElementById('themeSwitch');
+        
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeSwitch.checked = true;
+        }
+        
+        // Theme switch event listener
+        themeSwitch.addEventListener('change', function() {
+            if (this.checked) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+        
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
+            });
+        });
+    </script>
+    
     
 </body>
 </html>
