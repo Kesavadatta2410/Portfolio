@@ -1,503 +1,655 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kesava Datta - Portfolio</title>
-    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Kesava Datta - AI & ML Engineer Portfolio. Explore innovative projects, research, and expertise in deep learning, computer vision, and NLP.">
+    <meta name="keywords" content="AI, Machine Learning, Deep Learning, Portfolio, Kesava Datta, Computer Vision, NLP">
+    <meta name="author" content="Kesava Datta">
+    <title>Kesava Datta - AI & ML Engineer Portfolio</title>
+
+    <!-- Favicon -->
     <link rel="icon" href="/assets/Screenshot_2025-02-15_170029-removebg-preview.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <nav class="nav-bar">
-        <ul class="nav-links">
-            <li><a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#aboutme" class="nav-link"><i class="fas fa-user-alt"></i> About</a></li>
-            <li><a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i> Experience</a></li>
-            <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a></li>
-            <li><a href="#Research" class="nav-link"><i class="fas fa-book-open"></i> Research</a></li>
-            <li><a href="#skills" class="nav-link"><i class="fas fa-laptop-code"></i> Skills</a></li>
-            <li><a href="#interests" class="nav-link"><i class="fas fa-info"></i> Interests</a></li>
-            <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
-        <div class="theme-switch">
-            <input type="checkbox" id="themeSwitch" class="theme-switch-toggle">
-            <label for="themeSwitch" class="theme-switch-label"></label>
-        </div>
-        <div class="mobile-menu-btn">
-            <span></span>
-            <span></span>
-            <span></span>
+    <!-- ========================================
+         Navigation Bar
+         ======================================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Kesava Datta</a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#interests" class="nav-link">Interests</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <button id="paletteToggle" class="palette-toggle" aria-label="Switch color palette">
+                        <i class="fas fa-palette"></i>
+                        <span class="palette-text">Theme</span>
+                    </button>
+                </li>
+            </ul>
+
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
-
-
-
-
-
-
-
-<section id="home" class="section">
-    <div class="hero">
-        <!-- Smooth Background Layers -->
-        <div class="nature-bg">
-            <!-- Animated Water Waves -->
-            <div class="water-waves">
-                <div class="wave wave-1"></div>
-                <div class="wave wave-2"></div>
-                <div class="wave wave-3"></div>
-                <div class="wave wave-4"></div>
-            </div>
-            
-            <!-- Floating Clouds -->
-            <div class="clouds-container">
-                <div class="cloud cloud-1"></div>
-                <div class="cloud cloud-2"></div>
-                <div class="cloud cloud-3"></div>
-                <div class="cloud cloud-4"></div>
-            </div>
-            
-            <!-- Tech Grid Overlay -->
-            <div class="tech-grid">
-                <div class="grid-line horizontal"></div>
-                <div class="grid-line horizontal"></div>
-                <div class="grid-line horizontal"></div>
-                <div class="grid-line vertical"></div>
-                <div class="grid-line vertical"></div>
-                <div class="grid-line vertical"></div>
-            </div>
-            
-            <!-- Smooth Gradient Overlay -->
-            <div class="gradient-overlay"></div>
-        </div>
-
-        <!-- Hero Content with Better Visibility -->
+    <!-- ========================================
+         Hero Section
+         ======================================== -->
+    <section id="home" class="hero">
         <div class="hero-content">
-            <div class="content-container">
-                <!-- Enhanced Name Display -->
-                <div class="name-container">
-                    <h1 class="hero-name">
-                        <span class="name-part first-name">Kesava</span>
-                        <span class="name-part last-name">Datta</span>
-                    </h1>
-                    <div class="name-underline"></div>
-                </div>
-
-                <!-- Smooth Subtitle -->
-                <div class="subtitle-wrapper">
-                    <p class="hero-subtitle">Innovating through Technology & Creativity</p>
-                </div>
-
-                <!-- Enhanced Buttons -->
-                <div class="action-buttons">
-                    <a href="/labels/resume.pdf" class="smooth-btn primary-btn" download>
-                        <span class="btn-icon"><i class="fas fa-download"></i></span>
-                        <span class="btn-text">Download Resume</span>
-                        <div class="btn-ripple"></div>
-                    </a>
-                    <a href="#contact" class="smooth-btn secondary-btn">
-                        <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
-                        <span class="btn-text">Contact Me</span>
-                        <div class="btn-ripple"></div>
-                    </a>
-                </div>
+            <h1 class="hero-title">
+                <span class="hero-name">Kesava Datta</span>
+            </h1>
+            <p class="hero-subtitle">Innovating through Technology & Creativity</p>
+            <div class="hero-buttons">
+                <a href="/labels/resume.pdf" class="btn btn-primary" download>
+                    <i class="fas fa-download"></i>
+                    Download Resume
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-paper-plane"></i>
+                    Contact Me
+                </a>
             </div>
         </div>
+    </section>
 
-        <!-- Smooth Scroll Indicator -->
-        <div class="scroll-indicator">
-            <div class="scroll-icon">
-                <div class="scroll-dot"></div>
-            </div>
-            <span class="scroll-text">Scroll to explore</span>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section id="aboutme" class="me">
-        <div class="container">
+    <!-- ========================================
+         About Section
+         ======================================== -->
+    <section id="about" class="section about">
+        <div class="section-container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <div class="image-wrapper">
-                    <img src="/labels/profile.jpg" alt="Kesava Datta" class="me-image">
+                <div class="about-image">
+                    <img src="/labels/profile.jpg" alt="Kesava Datta - AI & ML Engineer">
                 </div>
-                <div class="text-content"><p>I'm an <strong>AI & ML Engineer</strong> who loves turning creative ideas into intelligent solutions. I enjoy exploring how technology can think, learn, and create in new ways.</p>
-<p>My work reflects a mix of <strong>curiosity</strong> and <strong>innovation</strong> — building systems that go beyond data and bring imagination into AI. I believe in using technology not just to solve problems, but to discover new possibilities.</p>
-<p>Driven by creativity and purpose, I aim to design intelligent systems that make technology feel more human and inspiring.</p>
+                <div class="about-text">
+                    <p>I'm an <strong>AI & ML Engineer</strong> who loves turning creative ideas into intelligent
+                        solutions.
+                        I enjoy exploring how technology can think, learn, and create in new ways.</p>
+                    <p>My work reflects a mix of <strong>curiosity</strong> and <strong>innovation</strong> — building
+                        systems that go beyond data and bring imagination into AI. I believe in using technology not
+                        just to
+                        solve problems, but to discover new possibilities.</p>
+                    <p>Driven by creativity and purpose, I aim to design intelligent systems that make technology feel
+                        more
+                        human and inspiring.</p>
                 </div>
-                
-                
-        </div>
-    </section>
-    
-
-    
-<!--experience-->    
-<section id="experience" class="section">
-        <h2 class="section-title">Experience</h2>
-        <div class="experience-timeline">
-
-            
-            <div class="experience-card fade-in-left">
-                <h3>Research Intern - IIIT Ranchi</h3>
-                <p>Developing an Explainable AI model to predict ICU mortality in 
-                    diabetic patients by highlighting key clinical risk factors 
-                    for transparent decision-making.</p>
-                <span>Deep Learning</span> <span>Explainable AI</span>
-            </div>
-
-            <div class="experience-card fade-in-right">
-                <h3>Research Intern - IIT Hyderabad</h3>
-                <p>Working on an AIML based project focused on detecting
-                    crop areas and identifying crop types from satellite
-imagery</p>
-                <span>Deep Learning</span> <span>Machine learning</span>
-            </div>
-            <div class="experience-card fade-in-left">
-                <h3>ML engineer - Logstrike</h3>
-                <p>Developed and deployed AI/ML models for real-time data analysis, enhancing operational efficiency</p>
-                <span>Deep Learning</span> <span>Machine learning</span>
-            </div>
-            <div class="experience-card fade-in-right">
-                <h3>Research and Development intern - Dtyle.Ai</h3>
-                <p>Worked on AI and computer vision tasks as part of the research team.</p>
-                <span>Computer Vision</span>
-            </div>
-            <div class="experience-card fade-in-left">
-                <h3>Research intern - GD Geonka University</h3>
-                <p>Revolutionizing Social Interaction with Emotion-Driven Connectivity</p>
-                <span>NLP</span> <span>Machine learning</span>
-            </div>
-            <div class="experience-card fade-in-right">
-                <h3>Research intern - Ganpat University</h3>
-                <p>Indentification of Stop Words</p>
-                <span>NLP</span> <span>Machine learning</span>
-            </div>
-            <div class="experience-card fade-in-left">
-                <h3>Technical Executive - Civi Glo Innovations</h3>
-                <p>Developed machines for the smart cities</p>
-                <span>IoT</span>
-            </div>
-            <div class="experience-card fade-in-right">
-                <h3>Python Developer - Cosmic3D Printers</h3>
-                <p>Developed Python programs to directly control 3D printers.</p>
-                <span>3D-Printing</span><span>Python</span>
-            </div>
-            <div class="experience-card fade-in-left">
-                <h3>President - Ankur Incubation Club (IIC)</h3>
-                <p>Led events and workshops, mentoring students in entrepreneurship.</p>
-                <span>Startups</span><span>Business</span>
-            </div>
-            <div class="experience-card fade-in-right">
-                <h3>Film Club Executive - Woxsen University</h3>
-                <p>Organized film screenings and discussions, fostering creativity among students.</p>
-                <span>Acting</span><span>Movies</span>
-            </div>
             </div>
         </div>
     </section>
 
+    <!-- ========================================
+         Experience Section
+         ======================================== -->
+    <section id="experience" class="section">
+        <div class="section-container">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-timeline">
 
-
-
-    
-    <section id="projects" class="section">
-        <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <div class="project-grid">
-            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="project-icon"><i class="fas fa-robot"></i></div>
-                <h3>MediLink</h3>
-                <p>A healthcare website for storing long-term patient records.</p>
-                <div class="project-tech"><span>Website</span><span>Healthcare</span></div>
-            </div>
-            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="project-icon"><i class="fas fa-robot"></i></div>
-                <h3>DroneGo</h3>
-                <p>Optimized multi-drone delivery system using path optimization algorithms.</p>
-                <div class="project-tech"><span>Drones</span><span>Automation</span><span>Software</span></div>
-                <div class="project-links">
-                    <a href="https://github.com/Kesavadatta2410/DroneGo/tree/main" class="project-link"><i class="fab fa-github"></i> Code</a>
-                </div>
-            </div>
-            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="project-icon"><i class="fas fa-robot"></i></div>
-                <h3>Genetic Disorder Detection</h3>
-                <p>Developed an explainable AI pipeline to detect and classify
-                     alternative RNA splicing events linked to genetic disorders</p>
-                <div class="project-tech"><span>Deep Learning</span><span>Machine Learning</span></div>
-                <div class="project-links">
-                    <a href="https://github.com/Kesavadatta2410/Predictive-modelling-of-RNA-Splicing-variance-using-AI" class="project-link"><i class="fab fa-github"></i> Code</a>
-                </div>
-            </div>
-            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="project-icon"><i class="fas fa-robot"></i></div>
-                <h3>Foreign Sketch Generator</h3>
-                <p>It give the grey-scale sketch image based on description of a person</p>
-                <div class="project-tech"><span>GAN</span><span>Machine Learning</span><span>NLP</span></div>
-                <div class="project-links">
-                    <a href="https://github.com/Kesavadatta2410/Foreign-Sketch-Generator" class="project-link"><i class="fab fa-github"></i> Code</a>
-                    <a href="/labels/sketch gen.jpg" class="project-link"><i class="fas fa-external-link-alt"></i> Sample Output</a>
-                </div>
-            </div>
-            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="project-icon"><i class="fas fa-robot"></i></div>
-                <h3>Pantry Chef</h3>
-                <p>It generates the food recipes. It takes the input of images for detection of ingredients.</p>
-                <div class="project-tech"><span>Food</span><span>CNN</span></div>
-                <div class="project-links">
-                    <a href="https://github.com/Kesavadatta2410/Foreign-Sketch-Generator" class="project-link"><i class="fab fa-github"></i> Code</a>
-                    <a href="https://pantrycheffoods.netlify.app/" class="project-link"><i class="fas fa-external-link-alt"></i> Website</a>
-                </div>
-            </div>              
-           
-        </div>
-        </div>
-    </section>
-
-    <section id="Research" class="section">
-        <div class="container">
-        <h2 class="section-title">Patents and Research</h2>
-        <p class="section-title">OnGoing</p>
-        <div class="Papers-grid">
-
-            <div class="Research-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="Research-icon"><i class="fas fa-robot"></i></div>
-                <h3>Wheels on the charge</h3>
-                <p>Dynamic wireless charging system for EVs</p>
-                <div class="Research-tech"><span>Patent: 202441067024 A</span><span>EV Technology</span></div>
-                <div class="Research-link">
-                    <!-- <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a> -->
-                    <a href="/labels/elp.png" class="Research-link"><i class="fas fa-external-link-alt"></i> Design</a>
-                    <a href="/labels/patent.pdf" class="Research-link"><i class="fas fa-external-link-alt"></i> Details</a>
-                </div>
-            </div>
-
-            <div class="Research-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="Research-icon"><i class="fas fa-robot"></i></div>
-                <h3>Drainage Rides</h3>
-                <p>An automated IoT-based machine for cleaning drainage systems.</p>
-                <div class="Research-tech"><span>Patent: 202541037701 A</span><span>Automation</span><span>Hardware</span></div>
-                <div class="Research-link">
-                    
-                    <a href="/labels/drainage rides.pdf" class="Research-link"><i class="fas fa-external-link-alt"></i> Details</a>
-                    <a href="/labels/SIP.png" class="Research-link"><i class="fas fa-external-link-alt"></i> Design</a>
-                </div>
-            </div>
-
-
-            <div class="Research-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="Research-icon"><i class="fas fa-robot"></i></div>
-                <h3>Wearable Support Device For Fall Prevention And Mobility Assistance</h3>
-                <p>A motorized smart belt with sensors for fall prevention and mobility support.</p>
-                <div class="Research-tech"><span>Patent: 202541065085 A</span><span>Automation</span><span>Healthcare</span></div>
-                <div class="Research-link">
-                    
-                    <a href="/labels/belt.pdf" class="Research-link"><i class="fas fa-external-link-alt"></i> Details</a>
-                
-                </div> 
-            </div>
-
-
-
-            <div class="Research-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="Research-icon"><i class="fas fa-robot"></i></div>
-                <h3>Bio Capsule - Nutrient Delivery System For An Agriculture Field</h3>
-                <p>The system integrates a biodegradable sensor array to process soil data and deliver nutrient solutions.</p>
-                <div class="Research-tech"><span>Patent:  202541065993 A</span><span>Agriculture</span><span>IoT</span></div>
-                <div class="Research-link">
-                    
-                    <a href="/labels/biocapsule.pdf" class="Research-link"><i class="fas fa-external-link-alt"></i> Details</a>
-                    <!-- <a href="/labels/SIP.png" class="Research-link"><i class="fas fa-external-link-alt"></i> Design</a> -->
-                </div> 
-            </div>
-
-            
-
-            
-            
-        </div>
-        </div>
-    </section>
-
-    <section id="skills" class="section">
-        <h2 class="section-title">Skills & Expertise</h2>
-        <div class="skills-container">
-            <div class="skill-category">                 
-                <h3><i class="fas fa-code"></i> Programming Languages</h3>                 
-                <div class="skill-grid">                     
-                    <div class="skill-item"><img src="/assets/html.png" alt="html" class="skill-icon"><span> HTML</span><div class="skill-level" data-level="90"></div></div>                     
-                    <div class="skill-item"><img src="/assets/css-3.png" alt="css" class="skill-icon"><span> CSS</span><div class="skill-level" data-level="85"></div></div>                     
-                    <div class="skill-item"><img src="/assets/python.png" alt="python" class="skill-icon"><span> Python</span><div class="skill-level" data-level="100"></div></div>                     
-                    <div class="skill-item"><img src="/assets/sql-server.png" alt="sql" class="skill-icon"><span> SQL</span><div class="skill-level" data-level="100"></div></div>                 
-                </div>             
-            </div>             
-            <div class="skill-category">                 
-                <h3><i class="fas fa-cogs"></i> Frameworks & Libraries</h3>                 
-                <div class="skill-grid">                     
-                    <div class="skill-item"><img src="/assets/tensorflow.png" alt="TensorFlow" class="skill-icon"><span>TensorFlow</span><div class="skill-level" data-level="90"></div></div>                     
-                    <div class="skill-item"><img src="/assets/pytorch.png" alt="PyTorch" class="skill-icon"><span>PyTorch</span><div class="skill-level" data-level="85"></div></div>                     
-                    <div class="skill-item"><img src="/assets/scikit_learn-removebg-preview.png" alt="Scikit-learn" class="skill-icon"><span>Scikit-learn</span><div class="skill-level" data-level="95"></div></div>                     
-                    <div class="skill-item"><img src="/assets/open_cv-removebg-preview.png" alt="OpenCV" class="skill-icon"><span>OpenCV</span><div class="skill-level" data-level="80"></div></div>                     
-                    <div class="skill-item"><img src="/assets/natural-language-processing.png" alt="NLTK" class="skill-icon"><span>NLTK</span><div class="skill-level" data-level="75"></div></div>                 
-                </div>             
-            </div>             
-            <div class="skill-category">                 
-                <h3><i class="fas fa-brain"></i> Core Expertise</h3>                 
-                <div class="skill-grid">                     
-                    <div class="skill-item"><img src="/assets/DSA.png" alt="DSA" class="skill-icon"><span>Data Structures & Algorithms</span><div class="skill-level" data-level="85"></div></div>                     
-                    <div class="skill-item"><img src="/assets/ML.png" alt="ML" class="skill-icon"><span>ML & DL</span><div class="skill-level" data-level="100"></div></div>                     
-                    <div class="skill-item"><img src="/assets/deep-learning (1).png" alt="Deep Learning" class="skill-icon"><span>Neural Networks</span><div class="skill-level" data-level="90"></div></div>                     
-                    <div class="skill-item"><img src="/assets/nlp.png" alt="NLP" class="skill-icon"><span>Natural Language Processing</span><div class="skill-level" data-level="85"></div></div>                     
-                    <div class="skill-item"><img src="/assets/cv-removebg-preview.png" alt="Computer Vision" class="skill-icon"><span>Computer Vision</span><div class="skill-level" data-level="80"></div></div>                     
-                    <div class="skill-item"><img src="/assets/iot.png" alt="IoT" class="skill-icon"><span>Internet of Things (IoT)</span><div class="skill-level" data-level="75"></div></div>                 
-                </div>             
-            </div>
-    </section><!-- Interests Section -->
-<section id="interests" class="section">
-    <div class="container">
-        <h2 class="section-title">Passions & Pursuits</h2>
-        <div class="interests-grid">
-            <div class="interest-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="interest-icon"><i class="fas fa-film"></i></div>
-                <h3>Movie Acting</h3>
-                <p>Bringing stories to life through cinematic performance and character development.</p>
-                <div class="interest-tech"><span>Method Acting</span><span>Screen Presence</span><span>Character Study</span></div>
-                <div class="interest-link">
-                    <a href="https://youtu.be/mL7ozaKYzuY?si=9dvFQQfS5fLyJz1L"><i class="fas fa-external-link-alt"></i> ShortFilm</a>
-                </div>
-            </div>
-            
-            <div class="interest-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="interest-icon"><i class="fas fa-brain"></i></div>
-                <h3>AI & Machine Learning</h3>
-                <p>Exploring deep learning, neural networks, computer vision, and natural language processing.</p>
-                <div class="interest-tech"><span>Deep Learning</span><span>Neural Networks</span><span>Computer Vision</span><span>NLP</span></div>
-            </div>
-            
-            <div class="interest-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="interest-icon"><i class="fas fa-dna"></i></div>
-                <h3>Biotechnology</h3>
-                <p>Advancing forensic science, algae research, and biological innovations for a better future.</p>
-                <div class="interest-tech"><span>Forensic Science</span><span>Algae Research</span><span>Bioengineering</span></div>
-            </div>
-            
-            <div class="interest-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="interest-icon"><i class="fas fa-leaf"></i></div>
-                <h3>Renewable Energy</h3>
-                <p>Developing sustainable solutions through wind, solar, and other eco-friendly technologies.</p>
-                <div class="interest-tech"><span>Solar Power</span><span>Wind Energy</span><span>Sustainable Tech</span></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <section id="contact" class="section">
-        <h2 class="section-title">Get in Touch</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="contact-card">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email Me</h3>
-                    <a href="mailto:kesavadattagarlapati@gmail.com">kesavadattagarlapati@gmail.com</a>
-                </div>
-                <div class="contact-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Social Media</h3>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/kesava-datta-a790892a3/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/Kesavadatta2410" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
-                        <a href="https://instagram.com/kesava_datta_2324/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                <div class="experience-card">
+                    <h3>Research Intern - IIIT Ranchi</h3>
+                    <p>Developing an Explainable AI model to predict ICU mortality in diabetic patients by highlighting
+                        key
+                        clinical risk factors for transparent decision-making.</p>
+                    <div class="experience-tags">
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">Explainable AI</span>
                     </div>
                 </div>
+
+                <div class="experience-card">
+                    <h3>Research Intern - IIT Hyderabad</h3>
+                    <p>Working on an AIML based project focused on detecting crop areas and identifying crop types from
+                        satellite imagery</p>
+                    <div class="experience-tags">
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">Machine Learning</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <h3>ML Engineer - Logstrike</h3>
+                    <p>Developed and deployed AI/ML models for real-time data analysis, enhancing operational efficiency
+                    </p>
+                    <div class="experience-tags">
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">Machine Learning</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <h3>Research and Development Intern - Dtyle.Ai</h3>
+                    <p>Worked on AI and computer vision tasks as part of the research team.</p>
+                    <div class="experience-tags">
+                        <span class="tag">Computer Vision</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <h3>Research Intern - GD Goenka University</h3>
+                    <p>Revolutionizing Social Interaction with Emotion-Driven Connectivity</p>
+                    <div class="experience-tags">
+                        <span class="tag">NLP</span>
+                        <span class="tag">Machine Learning</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <h3>Research Intern - Ganpat University</h3>
+                    <p>Identification of Stop Words</p>
+                    <div class="experience-tags">
+                        <span class="tag">NLP</span>
+                        <span class="tag">Machine Learning</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <h3>Technical Executive - Civi Glo Innovations</h3>
+                    <p>Developed machines for the smart cities</p>
+                    <div class="experience-tags">
+                        <span class="tag">IoT</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <h3>Python Developer - Cosmic3D Printers</h3>
+                    <p>Developed Python programs to directly control 3D printers.</p>
+                    <div class="experience-tags">
+                        <span class="tag">3D-Printing</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <h3>President - Ankur Incubation Club (IIC)</h3>
+                    <p>Led events and workshops, mentoring students in entrepreneurship.</p>
+                    <div class="experience-tags">
+                        <span class="tag">Startups</span>
+                        <span class="tag">Business</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <h3>Film Club Executive - Woxsen University</h3>
+                    <p>Organized film screenings and discussions, fostering creativity among students.</p>
+                    <div class="experience-tags">
+                        <span class="tag">Acting</span>
+                        <span class="tag">Movies</span>
+                    </div>
+                </div>
+
             </div>
-            <form class="contact-form" id="contactForm" action="https://formspree.io/f/mvgzqwql" method="POST">
-                <div class="form-group">
-                    <label for="name"></label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email"></label>
-                    <input type="email" id="email" name="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message"></label>
-                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                </div>
-                <button type="submit" class="btn primary-btn">
-                    <i class="fas fa-paper-plane"></i> Send
-                </button>
-            </form>
-            
-            
         </div>
     </section>
-        
 
+    <!-- ========================================
+         Projects Section
+         ======================================== -->
+    <section id="projects" class="section projects">
+        <div class="section-container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
 
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-hospital"></i></div>
+                    <h3>MediLink</h3>
+                    <p>A healthcare website for storing long-term patient records.</p>
+                    <div class="project-tech">
+                        <span class="tag">Website</span>
+                        <span class="tag">Healthcare</span>
+                    </div>
+                </div>
 
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-drone"></i></div>
+                    <h3>DroneGo</h3>
+                    <p>Optimized multi-drone delivery system using path optimization algorithms.</p>
+                    <div class="project-tech">
+                        <span class="tag">Drones</span>
+                        <span class="tag">Automation</span>
+                        <span class="tag">Software</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Kesavadatta2410/DroneGo/tree/main" class="project-link"
+                            target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                </div>
 
-    
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-dna"></i></div>
+                    <h3>Genetic Disorder Detection</h3>
+                    <p>Developed an explainable AI pipeline to detect and classify alternative RNA splicing events
+                        linked to
+                        genetic disorders</p>
+                    <div class="project-tech">
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">Machine Learning</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Kesavadatta2410/Predictive-modelling-of-RNA-Splicing-variance-using-AI"
+                            class="project-link" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                </div>
 
-    <div class="footer">
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-portrait"></i></div>
+                    <h3>Foreign Sketch Generator</h3>
+                    <p>It give the grey-scale sketch image based on description of a person</p>
+                    <div class="project-tech">
+                        <span class="tag">GAN</span>
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">NLP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Kesavadatta2410/Foreign-Sketch-Generator" class="project-link"
+                            target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        <a href="/labels/sketch gen.jpg" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Sample
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-utensils"></i></div>
+                    <h3>Pantry Chef</h3>
+                    <p>It generates the food recipes. It takes the input of images for detection of ingredients.</p>
+                    <div class="project-tech">
+                        <span class="tag">Food</span>
+                        <span class="tag">CNN</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Kesavadatta2410/Foreign-Sketch-Generator" class="project-link"
+                            target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        <a href="https://pantrycheffoods.netlify.app/" class="project-link" target="_blank"
+                            rel="noopener">
+                            <i class="fas fa-external-link-alt"></i> Website
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         Research & Patents Section
+         ======================================== -->
+    <section id="research" class="section">
+        <div class="section-container">
+            <h2 class="section-title">Patents and Research</h2>
+            <p class="research-status">OnGoing</p>
+            <div class="research-grid">
+
+                <div class="research-card">
+                    <div class="research-icon"><i class="fas fa-charging-station"></i></div>
+                    <h3>Wheels on the Charge</h3>
+                    <p>Dynamic wireless charging system for EVs</p>
+                    <div class="research-tech">
+                        <span class="tag">Patent: 202441067024 A</span>
+                        <span class="tag">EV Technology</span>
+                    </div>
+                    <div class="research-links">
+                        <a href="/labels/elp.png" class="research-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Design
+                        </a>
+                        <a href="/labels/patent.pdf" class="research-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Details
+                        </a>
+                    </div>
+                </div>
+
+                <div class="research-card">
+                    <div class="research-icon"><i class="fas fa-water"></i></div>
+                    <h3>Drainage Rides</h3>
+                    <p>An automated IoT-based machine for cleaning drainage systems.</p>
+                    <div class="research-tech">
+                        <span class="tag">Patent: 202541037701 A</span>
+                        <span class="tag">Automation</span>
+                        <span class="tag">Hardware</span>
+                    </div>
+                    <div class="research-links">
+                        <a href="/labels/drainage rides.pdf" class="research-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Details
+                        </a>
+                        <a href="/labels/SIP.png" class="research-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Design
+                        </a>
+                    </div>
+                </div>
+
+                <div class="research-card">
+                    <div class="research-icon"><i class="fas fa-walking"></i></div>
+                    <h3>Wearable Support Device For Fall Prevention And Mobility Assistance</h3>
+                    <p>A motorized smart belt with sensors for fall prevention and mobility support.</p>
+                    <div class="research-tech">
+                        <span class="tag">Patent: 202541065085 A</span>
+                        <span class="tag">Automation</span>
+                        <span class="tag">Healthcare</span>
+                    </div>
+                    <div class="research-links">
+                        <a href="/labels/belt.pdf" class="research-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Details
+                        </a>
+                    </div>
+                </div>
+
+                <div class="research-card">
+                    <div class="research-icon"><i class="fas fa-seedling"></i></div>
+                    <h3>Bio Capsule - Nutrient Delivery System For An Agriculture Field</h3>
+                    <p>The system integrates a biodegradable sensor array to process soil data and deliver nutrient
+                        solutions.</p>
+                    <div class="research-tech">
+                        <span class="tag">Patent: 202541065993 A</span>
+                        <span class="tag">Agriculture</span>
+                        <span class="tag">IoT</span>
+                    </div>
+                    <div class="research-links">
+                        <a href="/labels/biocapsule.pdf" class="research-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Details
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         Skills Section
+         ======================================== -->
+    <section id="skills" class="section skills">
+        <div class="section-container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-container">
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skill-grid">
+                        <div class="skill-item">
+                            <img src="/assets/html.png" alt="HTML" class="skill-icon">
+                            <span>HTML</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <img src="/assets/css-3.png" alt="CSS" class="skill-icon">
+                            <span>CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <img src="/assets/python.png" alt="Python" class="skill-icon">
+                            <span>Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <img src="/assets/sql-server.png" alt="SQL" class="skill-icon">
+                            <span>SQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-cogs"></i> Frameworks & Libraries</h3>
+                    <div class="skill-grid">
+                        <div class="skill-item">
+                            <img src="/assets/tensorflow.png" alt="TensorFlow" class="skill-icon">
+                            <span>TensorFlow</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <img src="/assets/pytorch.png" alt="PyTorch" class="skill-icon">
+                            <span>PyTorch</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <img src="/assets/scikit_learn-removebg-preview.png" alt="Scikit-learn" class="skill-icon">
+                            <span>Scikit-learn</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <img src="/assets/open_cv-removebg-preview.png" alt="OpenCV" class="skill-icon">
+                            <span>OpenCV</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <img src="/assets/natural-language-processing.png" alt="NLTK" class="skill-icon">
+                            <span>NLTK</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> Core Expertise</h3>
+                    <div class="skill-grid">
+                        <div class="skill-item">
+                            <img src="/assets/DSA.png" alt="DSA" class="skill-icon">
+                            <span>Data Structures & Algorithms</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <img src="/assets/ML.png" alt="Machine Learning" class="skill-icon">
+                            <span>ML & DL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <img src="/assets/deep-learning (1).png" alt="Neural Networks" class="skill-icon">
+                            <span>Neural Networks</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <img src="/assets/nlp.png" alt="NLP" class="skill-icon">
+                            <span>Natural Language Processing</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <img src="/assets/cv-removebg-preview.png" alt="Computer Vision" class="skill-icon">
+                            <span>Computer Vision</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <img src="/assets/iot.png" alt="IoT" class="skill-icon">
+                            <span>Internet of Things (IoT)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         Interests Section
+         ======================================== -->
+    <section id="interests" class="section">
+        <div class="section-container">
+            <h2 class="section-title">Passions & Pursuits</h2>
+            <div class="interests-grid">
+
+                <div class="interest-card">
+                    <div class="interest-icon"><i class="fas fa-film"></i></div>
+                    <h3>Movie Acting</h3>
+                    <p>Bringing stories to life through cinematic performance and character development.</p>
+                    <div class="interest-tech">
+                        <span class="tag">Method Acting</span>
+                        <span class="tag">Screen Presence</span>
+                        <span class="tag">Character Study</span>
+                    </div>
+                    <a href="https://youtu.be/mL7ozaKYzuY?si=9dvFQQfS5fLyJz1L" class="interest-link" target="_blank"
+                        rel="noopener">
+                        <i class="fas fa-external-link-alt"></i> Short Film
+                    </a>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Exploring deep learning, neural networks, computer vision, and natural language processing.</p>
+                    <div class="interest-tech">
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">Neural Networks</span>
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">NLP</span>
+                    </div>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-icon"><i class="fas fa-dna"></i></div>
+                    <h3>Biotechnology</h3>
+                    <p>Advancing forensic science, algae research, and biological innovations for a better future.</p>
+                    <div class="interest-tech">
+                        <span class="tag">Forensic Science</span>
+                        <span class="tag">Algae Research</span>
+                        <span class="tag">Bioengineering</span>
+                    </div>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Renewable Energy</h3>
+                    <p>Developing sustainable solutions through wind, solar, and other eco-friendly technologies.</p>
+                    <div class="interest-tech">
+                        <span class="tag">Solar Power</span>
+                        <span class="tag">Wind Energy</span>
+                        <span class="tag">Sustainable Tech</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         Contact Section
+         ======================================== -->
+    <section id="contact" class="section contact">
+        <div class="section-container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-container">
+
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email Me</h3>
+                        <a href="mailto:kesavadattagarlapati@gmail.com">kesavadattagarlapati@gmail.com</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <i class="fas fa-share-alt"></i>
+                        <h3>Social Media</h3>
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/kesava-datta-a790892a3/" target="_blank" rel="noopener"
+                                aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/Kesavadatta2410" target="_blank" rel="noopener"
+                                aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://instagram.com/kesava_datta_2324/" target="_blank" rel="noopener"
+                                aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/mvgzqwql" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         Footer
+         ======================================== -->
+    <footer class="footer">
         <p>&copy; 2025 Kesava Datta. All rights reserved.</p>
-    </div>
-    
-    <script>
-        // Theme Switch Functionality
-        const themeSwitch = document.getElementById('themeSwitch');
-        
-        // Check for saved theme preference
-        if (localStorage.getItem('theme') === 'dark') {
-            document.body.classList.add('dark-mode');
-            themeSwitch.checked = true;
-        }
-        
-        // Theme switch event listener
-        themeSwitch.addEventListener('change', function() {
-            if (this.checked) {
-                document.body.classList.add('dark-mode');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                document.body.classList.remove('dark-mode');
-                localStorage.setItem('theme', 'light');
-            }
-        });
-        
-        // Mobile menu functionality
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-        
-        mobileMenuBtn.addEventListener('click', function() {
-            this.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-        
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                mobileMenuBtn.classList.remove('active');
-            });
-        });
-        
-    </script>
-    
-    
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
+
 </html>
