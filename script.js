@@ -272,51 +272,52 @@ document.addEventListener('DOMContentLoaded', function () {
     //     });
     // }
 
-    // ============================================
-    // CUSTOM CURSOR EFFECT (Optional Enhancement)
-    // ============================================
-    const cursor = document.createElement('div');
-    cursor.className = 'custom-cursor';
-    cursor.style.cssText = `
-        position: fixed;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        border: 2px solid var(--accent);
-        pointer-events: none;
-        transform: translate(-50%, -50%);
-        transition: all 0.1s ease;
-        z-index: 9999;
-        display: none;
-    `;
-    document.body.appendChild(cursor);
+    // // ============================================
+    // // CUSTOM CURSOR EFFECT (Optional Enhancement)
+    // // ============================================
+    // const cursor = document.createElement('div');
+    // cursor.className = 'custom-cursor';
+    // cursor.style.cssText = `
+    //     position: fixed;
+    //     width: 20px;
+    //     height: 20px;
+    //     border-radius: 50%;
+    //     border: 2px solid var(--accent);
+    //     pointer-events: none;
+    //     transform: translate(-50%, -50%);
+    //     transition: all 0.1s ease;
+    //     z-index: 9999;
+    //     display: none;
+    // `;
+    // document.body.appendChild(cursor);
 
-    // Enable custom cursor on desktop only
-    if (window.innerWidth > 768) {
-        cursor.style.display = 'block';
+    // // Enable custom cursor on desktop only
+    // if (window.innerWidth > 768) {
+    //     cursor.style.display = 'block';
 
-        document.addEventListener('mousemove', function (e) {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
+    //     document.addEventListener('mousemove', function (e) {
+    //         cursor.style.left = e.clientX + 'px';
+    //         cursor.style.top = e.clientY + 'px';
+    //     });
 
-        // Expand cursor on hoverable elements
-        const hoverables = document.querySelectorAll('a, button, .project-card, .research-card, .experience-card, .interest-card');
+    //     // Expand cursor on hoverable elements
+    //     const hoverables = document.querySelectorAll('a, button, .project-card, .research-card, .experience-card, .interest-card');
 
-        hoverables.forEach(element => {
-            element.addEventListener('mouseenter', function () {
-                cursor.style.width = '40px';
-                cursor.style.height = '40px';
-                cursor.style.backgroundColor = 'rgba(176, 176, 176, 0.1)';
-            });
+    //     hoverables.forEach(element => {
+    //         element.addEventListener('mouseenter', function () {
+    //             cursor.style.width = '40px';
+    //             cursor.style.height = '40px';
+    //             cursor.style.backgroundColor = 'rgba(176, 176, 176, 0.1)';
+    //         });
 
-            element.addEventListener('mouseleave', function () {
-                cursor.style.width = '20px';
-                cursor.style.height = '20px';
-                cursor.style.backgroundColor = 'transparent';
-            });
-        });
-    }
+    //         element.addEventListener('mouseleave', function () {
+    //             cursor.style.width = '20px';
+    //             cursor.style.height = '20px';
+    //             cursor.style.backgroundColor = 'transparent';
+    //         });
+    //     });
+    // }
+
 
     // ============================================
     // INITIALIZE ANIMATIONS
@@ -325,3 +326,187 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('Current palette:', document.body.getAttribute('data-palette') || 'elegant');
 
 });
+
+// ============================================
+// PARTICLE SYSTEM FOR HERO SECTION
+// ============================================
+const particleCanvas = document.getElementById('particleCanvas');
+
+if (particleCanvas) {
+    const ctx = particleCanvas.getContext('2d');
+    let particles = [];
+    let mouse = { x: null, y: null, radius: 150 };
+
+    function resizeCanvas() {
+        particleCanvas.width = particleCanvas.offsetWidth;
+        particleCanvas.height = particleCanvas.offsetHeight;
+    }
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    particleCanvas.addEventListener('mousemove', function (event) {
+        const rect = particleCanvas.getBoundingClientRect();
+        mouse.x = event.clientX - rect.left;
+        mouse.y = event.clientY - rect.top;
+    });
+
+    particleCanvas.addEventListener('mouseleave', function () {
+        mouse.x = null;
+        mouse.y = null;
+    });
+
+    class Particle {
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
+            this.baseX = x;
+            this.baseY = y;
+            this.size = Math.random() * 3 + 1;
+            this.density = (Math.random() * 30) + 1;
+            this.speedX = Math.random() * 0.5 - 0.25;
+            this.speedY = Math.random() * 0.5 - 0.25;
+        }
+
+        draw() {
+            const isDark = document.body.getAttribute('data-palette') === 'urban';
+            const color = isDark ? 'rgba(242, 233, 228, 0.5)' : 'rgba(51, 51, 51, 0.3)';
+
+            ctx.fillStyle = color;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.closePath();
+            ctx.fill();
+        }
+
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+
+            if (mouse.x != null && mouse.y != null) {
+                let dx = mouse.x - this.x;
+                let dy = mouse.y - this.y;
+                let distance = Math.sqrt(dx * dx + dy * dy);
+                let forceDirectionX = dx / distance;
+                let forceDirectionY = dy / distance;
+                let maxDistance = mouse.radius;
+                let force = (maxDistance - distance) / maxDistance;
+                let directionX = forceDirectionX * force * this.density;
+                let directionY = forceDirectionY * force * this.density;
+
+                if (distance < mouse.radius) {
+                    this.x -= directionX * 3;
+                    this.y -= directionY * 3;
+                }
+            }
+
+            let dx = this.baseX - this.x;
+            let dy = this.baseY - this.y;
+            this.x += dx * 0.05;
+            this.y += dy * 0.05;
+
+            if (this.x < 0 || this.x > particleCanvas.width) this.baseX = Math.random() * particleCanvas.width;
+            if (this.y < 0 || this.y > particleCanvas.height) this.baseY = Math.random() * particleCanvas.height;
+        }
+    }
+
+    function init() {
+        particles = [];
+        const numberOfParticles = particleCanvas.width < 768 ? 50 : 100;
+
+        for (let i = 0; i < numberOfParticles; i++) {
+            let x = Math.random() * particleCanvas.width;
+            let y = Math.random() * particleCanvas.height;
+            particles.push(new Particle(x, y));
+        }
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, particleCanvas.width, particleCanvas.height);
+
+        particles.forEach(particle => {
+            particle.update();
+            particle.draw();
+        });
+
+        requestAnimationFrame(animate);
+    }
+
+    init();
+    animate();
+
+    window.addEventListener('resize', function () {
+        resizeCanvas();
+        init();
+    });
+}
+
+// ============================================
+// 3D PARALLAX EFFECTS FOR CARDS
+// ============================================
+
+function add3DParallax(selector) {
+    const cards = document.querySelectorAll(selector);
+
+    cards.forEach(card => {
+        card.addEventListener('mousemove', function (e) {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+        });
+
+        card.addEventListener('mouseleave', function () {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+        });
+    });
+}
+
+add3DParallax('.project-card');
+add3DParallax('.research-card');
+add3DParallax('.experience-card');
+add3DParallax('.interest-card');
+
+// ============================================
+// ENHANCED SCROLL ANIMATIONS
+// ============================================
+
+const observerOptions = {
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const appearObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('appear');
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+const animatedCards = document.querySelectorAll('.project-card, .research-card, .experience-card, .interest-card, .timeline-item');
+
+animatedCards.forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    appearObserver.observe(card);
+});
+
+const timelineItems = document.querySelectorAll('.timeline-item');
+
+timelineItems.forEach((item, index) => {
+    item.style.transitionDelay = `${index * 0.1}s`;
+});
+
+console.log('Enhanced portfolio features initialized! ✨');
+

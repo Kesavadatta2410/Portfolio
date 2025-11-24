@@ -62,6 +62,7 @@
          Hero Section
          ======================================== -->
     <section id="home" class="hero">
+        <canvas id="particleCanvas"></canvas>
         <div class="hero-content">
             <h1 class="hero-title">
                 <span class="hero-name">Kesava Datta</span>
@@ -113,96 +114,129 @@
         <div class="section-container">
             <h2 class="section-title">Experience</h2>
             <div class="experience-timeline">
+                <div class="timeline-line"></div>
 
-                <div class="experience-card">
-                    <h3>Research Intern - IIIT Ranchi</h3>
-                    <p>Developing an Explainable AI model to predict ICU mortality in diabetic patients by highlighting
-                        key
-                        clinical risk factors for transparent decision-making.</p>
-                    <div class="experience-tags">
-                        <span class="tag">Deep Learning</span>
-                        <span class="tag">Explainable AI</span>
+                <div class="timeline-item left">
+                    <div class="timeline-node"></div>
+                    <div class="experience-card">
+                        <h3>Research Intern - IIIT Ranchi</h3>
+                        <p>Developing an Explainable AI model to predict ICU mortality in diabetic patients by
+                            highlighting
+                            key clinical risk factors for transparent decision-making.</p>
+                        <div class="experience-tags">
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">Explainable AI</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="experience-card">
-                    <h3>Research Intern - IIT Hyderabad</h3>
-                    <p>Working on an AIML based project focused on detecting crop areas and identifying crop types from
-                        satellite imagery</p>
-                    <div class="experience-tags">
-                        <span class="tag">Deep Learning</span>
-                        <span class="tag">Machine Learning</span>
+                <div class="timeline-item right">
+                    <div class="timeline-node"></div>
+                    <div class="experience-card">
+                        <h3>Research Intern - IIT Hyderabad</h3>
+                        <p>Working on an AIML based project focused on detecting crop areas and identifying crop types
+                            from
+                            satellite imagery</p>
+                        <div class="experience-tags">
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">Machine Learning</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="experience-card">
-                    <h3>ML Engineer - Logstrike</h3>
-                    <p>Developed and deployed AI/ML models for real-time data analysis, enhancing operational efficiency
-                    </p>
-                    <div class="experience-tags">
-                        <span class="tag">Deep Learning</span>
-                        <span class="tag">Machine Learning</span>
+                <div class="timeline-item left">
+                    <div class="timeline-node"></div>
+                    <div class="experience-card">
+                        <h3>ML Engineer - Logstrike</h3>
+                        <p>Developed and deployed AI/ML models for real-time data analysis, enhancing operational
+                            efficiency
+                        </p>
+                        <div class="experience-tags">
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">Machine Learning</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="experience-card">
-                    <h3>Research and Development Intern - Dtyle.Ai</h3>
-                    <p>Worked on AI and computer vision tasks as part of the research team.</p>
-                    <div class="experience-tags">
-                        <span class="tag">Computer Vision</span>
+                <div class="timeline-item right">
+                    <div class="timeline-node"></div>
+                    <div class="experience-card">
+                        <h3>Research and Development Intern - Dtyle.Ai</h3>
+                        <p>Worked on AI and computer vision tasks as part of the research team.</p>
+                        <div class="experience-tags">
+                            <span class="tag">Computer Vision</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="experience-card">
-                    <h3>Research Intern - GD Goenka University</h3>
-                    <p>Revolutionizing Social Interaction with Emotion-Driven Connectivity</p>
-                    <div class="experience-tags">
-                        <span class="tag">NLP</span>
-                        <span class="tag">Machine Learning</span>
+                <div class="timeline-item left">
+                    <div class="timeline-node"></div>
+                    <div class="experience-card">
+                        <h3>Research Intern - GD Goenka University</h3>
+                        <p>Revolutionizing Social Interaction with Emotion-Driven Connectivity</p>
+                        <div class="experience-tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag">Machine Learning</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="experience-card">
-                    <h3>Research Intern - Ganpat University</h3>
-                    <p>Identification of Stop Words</p>
-                    <div class="experience-tags">
-                        <span class="tag">NLP</span>
-                        <span class="tag">Machine Learning</span>
+                <div class="timeline-item right">
+                    <div class="timeline-node"></div>
+                    <div class="experience-card">
+                        <h3>Research Intern - Ganpat University</h3>
+                        <p>Identification of Stop Words</p>
+                        <div class="experience-tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag">Machine Learning</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="experience-card">
-                    <h3>Technical Executive - Civi Glo Innovations</h3>
-                    <p>Developed machines for the smart cities</p>
-                    <div class="experience-tags">
-                        <span class="tag">IoT</span>
+                <div class="timeline-item left">
+                    <div class="timeline-node"></div>
+                    <div class="experience-card">
+                        <h3>Technical Executive - Civi Glo Innovations</h3>
+                        <p>Developed machines for the smart cities</p>
+                        <div class="experience-tags">
+                            <span class="tag">IoT</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="experience-card">
-                    <h3>Python Developer - Cosmic3D Printers</h3>
-                    <p>Developed Python programs to directly control 3D printers.</p>
-                    <div class="experience-tags">
-                        <span class="tag">3D-Printing</span>
-                        <span class="tag">Python</span>
+                <div class="timeline-item right">
+                    <div class="timeline-node"></div>
+                    <div class="experience-card">
+                        <h3>Python Developer - Cosmic3D Printers</h3>
+                        <p>Developed Python programs to directly control 3D printers.</p>
+                        <div class="experience-tags">
+                            <span class="tag">3D-Printing</span>
+                            <span class="tag">Python</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="experience-card">
-                    <h3>President - Ankur Incubation Club (IIC)</h3>
-                    <p>Led events and workshops, mentoring students in entrepreneurship.</p>
-                    <div class="experience-tags">
-                        <span class="tag">Startups</span>
-                        <span class="tag">Business</span>
+                <div class="timeline-item left">
+                    <div class="timeline-node"></div>
+                    <div class="experience-card">
+                        <h3>President - Ankur Incubation Club (IIC)</h3>
+                        <p>Led events and workshops, mentoring students in entrepreneurship.</p>
+                        <div class="experience-tags">
+                            <span class="tag">Startups</span>
+                            <span class="tag">Business</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="experience-card">
-                    <h3>Film Club Executive - Woxsen University</h3>
-                    <p>Organized film screenings and discussions, fostering creativity among students.</p>
-                    <div class="experience-tags">
-                        <span class="tag">Acting</span>
-                        <span class="tag">Movies</span>
+                <div class="timeline-item right">
+                    <div class="timeline-node"></div>
+                    <div class="experience-card">
+                        <h3>Film Club Executive - Woxsen University</h3>
+                        <p>Organized film screenings and discussions, fostering creativity among students.</p>
+                        <div class="experience-tags">
+                            <span class="tag">Acting</span>
+                            <span class="tag">Movies</span>
+                        </div>
                     </div>
                 </div>
 

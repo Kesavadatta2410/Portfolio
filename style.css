@@ -372,7 +372,7 @@ body {
 
 .about-image:hover img {
     transform: scale(1.05);
-} 
+}
 
 .about-text {
     flex: 2;
@@ -980,4 +980,302 @@ section {
 /* Loading animation for skill bars */
 .skill-item.visible .skill-progress {
     width: var(--skill-width, 0);
+}
+
+/* ============================================
+   PARTICLE CANVAS STYLING
+   ============================================ */
+
+#particleCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero::before {
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+    position: relative;
+}
+
+/* ============================================
+   EXPERIENCE TIMELINE LAYOUT
+   ============================================ */
+
+.experience-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: block;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--accent) 0%, transparent 100%);
+    z-index: 0;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    width: 50%;
+    padding: 0 2rem;
+    z-index: 1;
+}
+
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+    padding-right: 4rem;
+}
+
+.timeline-item.right {
+    left: 50%;
+    text-align: left;
+    padding-left: 4rem;
+}
+
+.timeline-node {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--accent);
+    border: 4px solid var(--primary);
+    border-radius: 50%;
+    top: 1.5rem;
+    z-index: 2;
+    box-shadow: 0 0 0 4px var(--shadow);
+    transition: all var(--transition-medium);
+}
+
+.timeline-item.left .timeline-node {
+    right: -10px;
+}
+
+.timeline-item.right .timeline-node {
+    left: -10px;
+}
+
+.timeline-item:hover .timeline-node {
+    transform: scale(1.3);
+    box-shadow: 0 0 0 8px var(--shadow-hover);
+}
+
+.timeline-item .experience-card {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.timeline-item.left .experience-card {
+    border-left: none;
+    border-right: 4px solid var(--accent);
+}
+
+.timeline-item .experience-tags {
+    justify-content: inherit;
+}
+
+.timeline-item.right .experience-tags {
+    justify-content: flex-start;
+}
+
+/* ============================================
+   3D PARALLAX EFFECTS FOR CARDS
+   ============================================ */
+
+.project-card,
+.research-card,
+.interest-card,
+.experience-card {
+    transform-style: preserve-3d;
+}
+
+/* ============================================
+   RESPONSIVE TIMELINE LAYOUT
+   ============================================ */
+
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 30px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 4rem !important;
+        padding-right: 0 !important;
+        left: 0 !important;
+        text-align: left !important;
+    }
+
+    .timeline-item .timeline-node {
+        left: 20px !important;
+        right: auto !important;
+    }
+
+    .timeline-item.left .experience-card {
+        border-right: none;
+        border-left: 4px solid var(--accent);
+    }
+
+    .timeline-item .experience-tags {
+        justify-content: flex-start !important;
+    }
+}
+
+
+
+/* ============================================
+   PARTICLE CANVAS STYLING
+   ============================================ */
+
+#particleCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero::before {
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+    position: relative;
+}
+
+/* ============================================
+   EXPERIENCE TIMELINE LAYOUT
+   ============================================ */
+
+.experience-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: block;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--accent) 0%, transparent 100%);
+    z-index: 0;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    width: 50%;
+    padding: 0 2rem;
+    z-index: 1;
+}
+
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+    padding-right: 4rem;
+}
+
+.timeline-item.right {
+    left: 50%;
+    text-align: left;
+    padding-left: 4rem;
+}
+
+.timeline-node {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--accent);
+    border: 4px solid var(--primary);
+    border-radius: 50%;
+    top: 1.5rem;
+    z-index: 2;
+    box-shadow: 0 0 0 4px var(--shadow);
+    transition: all var(--transition-medium);
+}
+
+.timeline-item.left .timeline-node {
+    right: -10px;
+}
+
+.timeline-item.right .timeline-node {
+    left: -10px;
+}
+
+.timeline-item:hover .timeline-node {
+    transform: scale(1.3);
+    box-shadow: 0 0 0 8px var(--shadow-hover);
+}
+
+.timeline-item .experience-card {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.timeline-item.left .experience-card {
+    border-left: none;
+    border-right: 4px solid var(--accent);
+}
+
+.timeline-item .experience-tags {
+    justify-content: inherit;
+}
+
+.timeline-item.right .experience-tags {
+    justify-content: flex-start;
+}
+
+/* 3D Parallax for cards */
+.project-card,
+.research-card,
+.interest-card,
+.experience-card {
+    transform-style: preserve-3d;
+}
+
+/* Responsive timeline */
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 30px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 4rem !important;
+        padding-right: 0 !important;
+        left: 0 !important;
+        text-align: left !important;
+    }
+
+    .timeline-item .timeline-node {
+        left: 20px !important;
+        right: auto !important;
+    }
+
+    .timeline-item.left .experience-card {
+        border-right: none;
+        border-left: 4px solid var(--accent);
+    }
+
+    .timeline-item .experience-tags {
+        justify-content: flex-start !important;
+    }
 }
